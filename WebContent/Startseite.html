@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Suche</title>
+ <script type="text/javascript" src="../Name.js"></script>
+<script type="text/javascript">
+function test(){
+
+	var test = document.getElementById("text").value;
+	for (var Eigenschaft in Namen.Name.Vorname ){
+	var tel= Namen.Name.Vorname[Eigenschaft];
+var ausgabe = ausgabe + tel ;
+	if (test.localeCompare(tel)){
+		document.getElementById("text").value= tel;
+		break;
+	}
+
+	}
+
+	document.getElementById("vorschlag").innerHTML= ausgabe;
+	
+}
+</script>
+</head>
+<body>
+<form>
+	<input type="text"  onkeyup="test()" value="" id="text">
+
+	<div id="vorschlag">hier kommt der txt</div>
+</form>
+</body>
+</html>
